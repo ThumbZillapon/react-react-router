@@ -36,9 +36,9 @@ function HomePage() {
         <button onClick={()=> navigate("/product/create")}>Create Product</button>
       </div>
       <div className="product-list">
-        {products.map((product) => {
+        {products.map((product, i) => {
           return (
-            <div className="product">
+            <div className="product" key = {i}>
               <div className="product-preview">
                 <img
                   src={product.image}
